@@ -48,6 +48,10 @@ body {
   color: #262626;
 }
 
+img {
+  max-width: 100%;
+}
+
 .section {
   padding: 100px 0;
 }
@@ -71,6 +75,7 @@ body {
   background-color: #fff;
   font-family: 'Proxima Nova Semibold', sans-serif;
   color: #507fe1;
+  text-decoration: none;
 }
 
 .button {
@@ -80,6 +85,24 @@ body {
   background-color: #507fe1;
   color: #fff;
   font-family: 'Proxima Nova Semibold', sans-serif;
+  text-decoration: none;
+}
+
+.button-fitting {
+  color: #507fe1;
+  background-color: #fff;
+}
+
+.button-add {
+  background-color: #7c9fe8;
+  color: #ffffff;
+}
+
+.button-like {
+  background-color: #507fe1;
+  height: 30px;
+  width: 30px;
+  border: none;
 }
 
 .bg-secondary {
@@ -445,7 +468,7 @@ body {
   -ms-flex-preferred-size: 33%;
       flex-basis: 33%;
   text-align: center;
-  margin-bottom: 100px;
+  margin-bottom: 70px;
 }
 
 .features-block__text {
@@ -465,6 +488,92 @@ body {
     -ms-flex-preferred-size: 100%;
         flex-basis: 100%;
     margin-bottom: 50px;
+  }
+}
+
+.catalog {
+  background-color: #f5f6f8;
+}
+
+.catalog-block {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.catalog__cart {
+  margin-bottom: 30px;
+}
+
+.catalog-cart {
+  max-width: 570px;
+  position: relative;
+  -webkit-box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+          box-shadow: 7px 5px 21px rgba(0, 0, 0, 0.1);
+}
+
+.catalog-cart__img {
+  width: 100%;
+  height: 100%;
+  display: block;
+}
+
+.catalog-cart__buttons {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.catalog-cart__button {
+  padding: 10px;
+  text-transform: uppercase;
+  border: none;
+  font-size: 11px;
+  height: 30px;
+}
+
+.catalog-cart__tag {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  padding: 10px;
+  font-size: 12px;
+  text-transform: uppercase;
+  color: #ffffff;
+  background-color: rgba(80, 127, 225, 0.6);
+}
+
+.catalog__link {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.catalog__link-more {
+  display: inline-block;
+  margin-bottom: 24px;
+}
+
+.catalog__descritpion {
+  display: block;
+  font-size: 16px;
+}
+
+@media (max-width: 1199px) {
+  .catalog-block {
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+  }
+  .catalog-cart {
+    max-width: 470px;
   }
 }
 /*# sourceMappingURL=style.css.map */
