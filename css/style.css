@@ -5,7 +5,26 @@
 
 .container {
   max-width: 1170px;
-  margin: 0 auto;
+  margin: auto;
+}
+
+@media (max-width: 1199px) {
+  .container {
+    max-width: 960px;
+  }
+}
+
+@media (max-width: 991px) {
+  .container {
+    max-width: 750px;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    max-width: 100%;
+    padding: 0 20px;
+  }
 }
 
 @font-face {
@@ -46,6 +65,53 @@ body {
   background-color: #507fe1;
   color: #fff;
   font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.bg-secondary {
+  background-color: #f1f1f1;
+}
+
+.input {
+  height: 80px;
+  padding-left: 30px;
+  width: 100%;
+  border: 1px solid #dddddd;
+}
+
+.checkbox {
+  display: none;
+}
+
+.checkbox:checked + label:before {
+  background-color: #507fe1;
+}
+
+.checkbox-label {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin-right: 40px;
+}
+
+.checkbox-label:hover {
+  cursor: pointer;
+}
+
+.checkbox-label:before {
+  display: inline-block;
+  content: "";
+  width: 30px;
+  height: 30px;
+  border: 1px solid #dddddd;
+}
+
+@media (max-width: 576px) {
+  .button-o {
+    font-size: 10px;
+  }
 }
 
 .navbar {
@@ -100,8 +166,8 @@ body {
   z-index: 0;
   -webkit-transition: 0.3s;
   transition: 0.3s;
-  -webkit-transform: translateY(-100%);
-          transform: translateY(-100%);
+  -webkit-transform: translateY(-200%);
+          transform: translateY(-200%);
 }
 
 .menu_active {
@@ -170,6 +236,36 @@ body {
   color: #7b7b79;
 }
 
+@media (max-width: 991px) {
+  .navbar__mobile, .navbar__landline {
+    display: none;
+  }
+}
+
+@media (max-width: 576px) {
+  .navbar-wrap {
+    min-height: 60px;
+  }
+  .logo {
+    display: none;
+  }
+  .menu {
+    top: 60px;
+  }
+  .menu-button {
+    height: 60px;
+  }
+  .menu__nav {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .menu__link {
+    margin-bottom: 20px;
+  }
+}
+
 .hero {
   background: #f1f1f1 url("../img/hero/hero-bg.jpg") no-repeat center top 80px;
   background-size: contain;
@@ -188,5 +284,74 @@ body {
   margin-bottom: 65px;
   font-size: 30px;
   font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+@media (max-width: 991px) {
+  .hero {
+    background-size: cover;
+    background-position: top left 30%;
+  }
+}
+
+.offer {
+  padding: 129px 0;
+}
+
+.offer-block {
+  background-color: #fff;
+  padding: 80px;
+  margin-top: -200px;
+}
+
+.offer__title {
+  font-size: 25px;
+  text-transform: uppercase;
+  font-family: 'Proxima Nova Semibold', sans-serif;
+}
+
+.offer__subtitle {
+  display: block;
+  font-size: 21px;
+  margin-bottom: 40px;
+}
+
+.form__row {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  max-width: 900px;
+  margin-bottom: 25px;
+}
+
+.form__row:last-child {
+  margin-bottom: 0;
+}
+
+.form__label {
+  display: block;
+  font-size: 17px;
+  margin-bottom: 12px;
+}
+
+.form__group {
+  -ms-flex-preferred-size: 33.3%;
+      flex-basis: 33.3%;
+}
+
+.form__input {
+  width: 100%;
+  border-right: none;
+}
+
+.form__input:last-child {
+  border-right: 1px solid #dddddd;
+}
+
+.form__button {
+  height: 80px;
+  width: 100%;
 }
 /*# sourceMappingURL=style.css.map */
