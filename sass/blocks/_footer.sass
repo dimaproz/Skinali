@@ -1,0 +1,75 @@
+.footer
+    background-color: black
+    color: #fff
+    padding: 40px 0
+    a 
+        color: #fff
+        text-decoration: none
+    &-block 
+        display: flex 
+        justify-content: space-between
+        align-items: flex-start
+    &__title
+        margin-bottom: 10px
+        font-size: 18px
+        text-transform: uppercase   
+        +bold 
+        margin: 0
+    &__subtitle
+        display: block
+        margin-bottom: 48px
+    &__copy
+        color: #767676
+    &__pay-logo
+        margin: 0 15px
+    &__contacts
+        text-align: right
+    &__phone
+        display: block
+        margin-bottom: 12px
+        font-size: 20px
+    &__mail
+        display: block
+        margin-bottom: 18px
+        font-size: 16px
+    // &-social
+    //     &__link
+    //         margin-right: 11px
+    //         width: 100%
+    //         height: 100%
+    //         img
+    //             width: 25px
+    //             height: 25px
+    &-social
+        &__twitter
+            background-image: url("../img/footer/sprite.png")
+            background-position: 0px 0px
+            width: 25px
+            height: 25px
+            display: inline-block
+            margin-right: 11px
+        &__facebook
+            background-image: url("../img/footer/sprite.png")
+            background-position: -40px 0px
+            width: 25px
+            height: 25px
+            display: inline-block
+            margin-right: 11px
+        &__vk
+            background-image: url("../img/footer/sprite.png")
+            background-position: -76px 0px
+            width: 25px
+            height: 25px
+            display: inline-block
+@media (max-width: 768px)
+    .footer
+        &-block 
+            flex-direction: column
+            align-items: center
+            text-align: center
+        &__contacts
+            text-align: center
+            margin-top: 30px
+
+
+
