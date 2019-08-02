@@ -1,0 +1,18 @@
+.questions
+    &__title 
+        font-size: 30px
+        +bold
+    &-block 
+        display: flex
+        justify-content: space-around
+        align-items: center
+        max-width: 800px
+        margin: auto
+        flex-wrap: wrap
+    &__link
+        font-size: 24px
+        color: $primary
+@media (max-width: 768px)
+    .questions
+        &-block
+            flex-direction: column
