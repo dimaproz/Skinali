@@ -4,14 +4,14 @@ body
 img 
     max-width: 100% 
 .section
-    padding: 100px 0
+    padding: 60px 0
     &-title
         font-size: 30px
         +bold 
         text-align: center
         text-transform: uppercase 
     &__title
-        margin-bottom: 100px
+        margin-bottom: 60px
 .button-o
     text-transform: uppercase
     border: 2px solid $primary
@@ -30,6 +30,8 @@ img
     color: #fff
     +bold
     text-decoration: none
+    &:hover
+        cursor: pointer
     &-fitting
         color: $primary
         background-color: #fff
@@ -67,8 +69,11 @@ img
             border: 1px solid #dddddd
 
 @media (max-width: 576px)
-    .button-o
+    .button
+        font-size: 12px
+        &-o
         font-size: 10px
+    
     .section
         padding: 60px 0
         &-title 
