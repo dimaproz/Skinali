@@ -8,20 +8,21 @@
     <title>Skinali</title>
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/twentytwenty.css">
 </head>
 
 <body>
-    <header class="header">
+    <header class="header" id="header">
         <div class="menu">
             <div class="container">
                 <nav class="menu__nav">
-                    <a href="#" class="menu__link">Главная</a>
-                    <a href="#" class="menu__link">Продукция</a>
-                    <a href="#" class="menu__link">Каталог</a>
-                    <a href="#" class="menu__link">Примеры работ</a>
-                    <a href="#" class="menu__link">Примерка изображений</a>
-                    <a href="#" class="menu__link">Стоимость дилерам</a>
-                    <a href="#" class="menu__link">О скинали</a>
+                    <a href="#header" class="menu__link">Главная</a>
+                    <a href="#features" class="menu__link">Преимущества</a>
+                    <a href="#catalog" class="menu__link">Каталог</a>
+                    <a href="#price" class="menu__link">Цены и виды</a>
+                    <a href="#steps" class="menu__link">Этапы работ</a>
+                    <a href="#reviews" class="menu__link">Отзывы</a>
+                    <a href="#contacts" class="menu__link">Контакты</a>
                 </nav>
             </div>
             <!-- /.menu-wrap -->
@@ -52,9 +53,9 @@
                         <a class="navbar__phone" href="tel:+74991234567">+7 499 123-45-67</a>
                         <a class="navbar__email navbar__small-text" href="mailto:info@mail.cu">info@mail.cu</a>
                     </div>
-                    <button class="button-o navbar__button">
+                    <a href="#offer" class="button-o navbar__button">
                         Получить консультацию
-                    </button>
+                    </a>
                 </div>
             </div>
             <!-- /.container -->
@@ -68,16 +69,16 @@
                 <span class="hero__subtitle">
                     от 3 000 р/м2
                 </span>
-                <button class="button hero__button">
+                <a href="#offer" class="button hero__button">
                     Заказать скинали
-                </button>
+                </a>
             </div>
         </div>
         <!-- /.hero -->
     </header>
     <!-- /.header -->
     <main>
-        <section class="offer bg-secondary">
+        <section class="offer bg-secondary" id="offer">
             <div class="container">
                 <div class="offer-block offer__block offer-block_calc-bg">
                     <h2 class="offer__title">
@@ -92,19 +93,26 @@
                                 <label for="" class="form__label">
                                     Вид стекла
                                 </label>
-                                <input type="text" class="input form__input">
+                                <input type="hidden" name="type" id="select-type" value="C печатью">
+                                <div class="select form__select">
+                                    <div class="select_checked">C печатью</div>
+                                    <ul class="select__dropdown">
+                                        <li class="select__option" data-value="С печатью">С печатью</li>
+                                        <li class="select__option" data-value="Без печати">Без печати</li>
+                                    </ul>
+                                </div>
                             </div>
                             <div class="form__group">
                                 <label for="" class="form__label">
                                     Ширина, см
                                 </label>
-                                <input type="text" class="input form__input">
+                                <input type="number" class="input form__input">
                             </div>
                             <div class="form__group">
                                 <label for="" class="form__label">
                                     Высота, см
                                 </label>
-                                <input type="text" class="input form__input">
+                                <input type="number" class="input form__input">
                             </div>
                         </div>
                         <div class="form__row form__row-checkbox">
@@ -135,7 +143,7 @@
             <!-- /.container -->
         </section>
         <!-- /.offer -->
-        <section class="section features">
+        <section class="section features"  id="features">
             <div class="container">
                 <h2 class="section__title section-title">
                     Наши преимущества
@@ -174,7 +182,7 @@
             </div>
         </section>
         <!-- /.features -->
-        <section class="section catalog">
+        <section class="section catalog" id="catalog">
             <div class="container">
                 <h2 class="section-title section__title">
                     Каталог скинали
@@ -371,7 +379,7 @@
             </div>
         </section>
         <!-- /.blog -->
-        <section class="section price">
+        <section class="section price" id="price">
             <div class="container">
                 <h2 class="section-title section__title">
                     Цены и виды скинали
@@ -471,7 +479,7 @@
             <!-- /.container -->
         </section>
         <!-- /.section price -->
-        <section class="section steps">
+        <section class="section steps" id="steps">
             <div class="container">
                 <h2 class="section-title section__title">
                     Этапы работ
@@ -530,7 +538,45 @@
             </div>
         </section>
         <!-- /.section steps -->
-        <section class="section reviews">
+        <section class="section before">
+            <div class="container">
+                <h2 class="section-title section__title">
+                    До и после
+                </h2>
+                <div class="before-slider-wrap">
+                    <div class="before-slider">
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                        <div class="before-slider__item">
+                            <div class="before-after">
+                                <img src="img/before-slider/sample-before.png" alt="">
+                                <img src="img/before-slider/sample-after.png" alt="">
+                            </div>
+                        </div>
+                    </div> 
+                    <div class="before-slider-arrows">
+                        <button class="arrow arrow-left">
+                            <img src="img/before-slider/left.png" alt="">
+                        </button>
+                        <button class="arrow arrow-right">
+                            <img src="img/before-slider/right.png" alt="">
+                        </button>
+                    </div>
+                </div>
+                <!-- /.before-slider-wrap -->
+            </div>
+        </section>
+        <section class="section reviews" id="reviews">
             <div class="container">
                 <h2 class="section-title section__title">
                     Отзывы наших клиентов
@@ -596,7 +642,7 @@
                                 <input type="text" class="input form__input" placeholder="Ваше имя">
                             </div>
                             <div class="form__group">
-                                <input type="text" class="input form__input" placeholder="Ваше телефон">
+                                <input type="tel" class="input form__input" placeholder="Ваше телефон">
                             </div>
                             <div class="form__group">
                                 <input type="text" class="input form__input" placeholder="Ваше цена">
@@ -644,7 +690,7 @@
             </div>
         </section>
         <!-- /.factory -->
-        <section class="section contacts">
+        <section class="section contacts" id="contacts">
             <div class="container">
                 <h2 class="section-title section__title">
                     Контакты
@@ -682,7 +728,9 @@
         </section>
         <!-- /.section contacts -->
         <div class="map" id="map">
-                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.755385899869!2d37.64332064899024!3d55.65846341326281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab36bf58f6ed5%3A0x12b618d7bb830dae!2z0JrQsNGI0LjRgNGB0LrQvtC1INGILiwgMjMsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTU0Nzg!5e0!3m2!1sru!2sus!4v1564741110855!5m2!1sru!2sus" width="100%" height="410" frameborder="0" style="border:0" allowfullscreen></iframe>
+            <iframe
+                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2250.755385899869!2d37.64332064899024!3d55.65846341326281!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x414ab36bf58f6ed5%3A0x12b618d7bb830dae!2z0JrQsNGI0LjRgNGB0LrQvtC1INGILiwgMjMsINCc0L7RgdC60LLQsCwg0KDQvtGB0YHQuNGPLCAxMTU0Nzg!5e0!3m2!1sru!2sus!4v1564741110855!5m2!1sru!2sus"
+                width="100%" height="410" frameborder="0" style="border:0" allowfullscreen></iframe>
         </div>
         <!-- /.map -->
         <section class="section questions">
@@ -733,10 +781,16 @@
         </div>
         <!-- /.container -->
     </footer>
-    <!-- /.footer -->  
+    <!-- /.footer -->
 
     <!-- Подключение виджета отбратной связи через соцсети -->
     <script type="text/javascript" src="https://spikmi.com/Widget?Id=1387"></script>
+    <script src="https://code.jquery.com/jquery-2.2.4.min.js"></script>
+    <script src="js/jquery.event.move.js"></script>
+    <script src="js/jquery.twentytwenty.js"></script>
+    <script src="js/slick.min.js"></script>
+    <script src="js/main.js"></script>
+    <script src="js/jquery.maskedinput.min.js"></script>
 </body>
 
 </html>

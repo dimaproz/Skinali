@@ -45,6 +45,41 @@ img
         border: none
 .bg-secondary
     background-color: $bg-secondary
+.select 
+    position: relative
+    height: 80px
+    width: 100%
+    border: 1px solid #dddddd
+    &:after
+        content: ''
+        position: absolute
+        top: 50%
+        right: 20px
+        transform: translateY(-50%)
+        width: 20px
+        height: 20px
+        background: url('../img/offer/caret.png') no-repeat center 
+    &:hover 
+        cursor: pointer
+    &_checked
+        padding-left: 30px
+        line-height: 80px
+    &__dropdown
+        position: absolute
+        top: 80px
+        width: 100%
+        border: 1px solid #dddddd
+        background-color: #fff
+        margin: 0
+        list-style: none
+        padding: 0
+        display: none
+        &_open
+            display: block
+    &__option
+        padding: 20px
+        &:hover
+            background-color: $bg-secondary
 .input 
     height: 80px
     padding-left: 30px
